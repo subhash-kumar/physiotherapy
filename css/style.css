@@ -8,6 +8,7 @@
 @media (prefers-reduced-motion:no-preference) {
   :root{scroll-behavior:smooth}
 }
+html, body { max-width: 100%; overflow-x: clip; }
 body{font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
 hr{margin:1rem 0;color:inherit;border:0;border-top:var(--bs-border-width) solid;opacity:.25}
 h1,h2,h3,h4{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;color:var(--bs-heading-color)}
@@ -2255,7 +2256,7 @@ body.sticky-cta-hidden .back-to-top{bottom:20px}
 .hero .hero-benefits>div{position:relative;flex:1;flex-direction:column;align-items:center;gap:8px;padding:0 5px;text-align:center;border:0}
 .hero .hero-benefits>div+div:before{content:"";position:absolute;left:0;top:30%;bottom:14%;width:1px;background:#ffffffa6}
 .hero .hero-benefits img{width:36px;height:36px;object-fit:contain}
-.hero .hero-benefits>div:first-child img{padding:2px;border-radius:50%;background:#fff}
+.hero .hero-benefits>div:first-child img{padding:2px;border-radius:50%;/* background:#fff */}
 .hero .hero-benefits strong{font-size:clamp(9px,.77vw,12px);font-weight:700;line-height:1.4;margin:0 0 4px}
 .hero .hero-benefits span{font-size:clamp(8px,.65vw,10px);line-height:1.5;font-weight:400}
 .hero .application-panel{width:29.5%;max-width:440px;padding:24px 16px 38px}
@@ -2781,9 +2782,9 @@ dialog.law-event-dialog{width:min(1140px,calc(100vw - 40px));max-width:none;max-
 .hero .hero-benefits>div{position:relative;display:flex;flex:1;min-width:0;flex-direction:column;align-items:center;gap:8px;padding:0 8px;text-align:center;border:0}
 .hero .hero-benefits>div+div:before{content:"";position:absolute;left:0;top:12%;bottom:12%;width:1px;background:#ffffff50}
 .hero .hero-benefits img{width:34px;height:34px;flex:none;object-fit:contain}
-.hero .hero-benefits>div:first-child img{padding:3px;border-radius:50%;background:#fff}
+.hero .hero-benefits>div:first-child img{padding:3px;border-radius:50%;/* background:#fff */}
 .hero .hero-benefits strong{margin:0;color:#fff;font-size:clamp(11px,.9vw,13px);font-weight:700;line-height:1.4}
-.hero .hero-benefits span{color:#fff;font-size:clamp(8px,.66vw,10px);font-weight:400;line-height:1.45}
+.hero .hero-benefits span{color:#fff;font-size:clamp(15px,1.1vw,18px);font-weight:400;line-height:1.45}
 .hero .hero-student{position:absolute;z-index:2;left:36%;bottom:-1%;width:auto;height:86%;max-width:none;max-height:none;object-fit:contain;object-position:center bottom;pointer-events:none}
 .hero .application-panel{position:relative;z-index:5;width:28.5%;max-width:420px;margin-left:auto;padding:20px 14px 28px;border-radius:18px}
 .hero .application-title{margin-bottom:34px}
@@ -3735,4 +3736,264 @@ button[aria-label*="next" i]:disabled{
   white-space:nowrap;
  }
  .sticky-admissions-cta a:focus-visible{outline-offset:-4px}
+}
+
+
+/* hero section css */
+
+.hero{height:clamp(700px,50vw,820px);position:relative;isolation:isolate;color:white;overflow:hidden}
+.hero-backdrop{position:absolute;inset:-5px;z-index:-2;background:url("../images/banner-physio.webp") center/cover;filter:blur(2.5px)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.48) 34%,rgba(0,0,0,.1) 68%,rgba(0,0,0,.12));z-index:-1}
+.hero-inner{height:100%;position:relative;max-width:1600px;margin:auto;width:92.5%;display:flex;align-items:center;justify-content:space-between}
+.hero-copy{width:41%;padding-bottom:8px;position:relative;z-index:2}
+.school-name{font-size:clamp(28px,2.5vw,40px);line-height:1.25;border-left:2px solid #ee0014;padding-left:7px;font-weight:700;margin-bottom:12px}
+.hero h1{font:600 clamp(48px,12.5vw,50px)/1.15 Anton,sans-serif;margin:0 0 10px;background:linear-gradient(105deg,#ffcf30,#ff182b);color:transparent;background-clip:text;-webkit-background-clip:text;width:max-content;line-height: 1.2 !important;}
+.admissions-kicker{display:none;max-width:470px;margin:0 0 12px;color:#fff;font-size:clamp(12px,1vw,15px);font-weight:700;line-height:1.45;letter-spacing:.02em;text-shadow:0 1px 3px #0008}
+.admissions-ribbon{background:#d6000b;color:white;min-height:44px;padding:10px 20px;font-weight:800;font-size:clamp(14px,1.2vw,18px);line-height:1.4;letter-spacing:0;display:inline-flex;gap:18px;align-items:center}
+.admissions-ribbon:hover{background:#bd0006}
+.hero-rule{width:95px;height:2px;background:#ec001a;margin:35px 0 20px}
+.hero-intro{max-width:460px;font-size:clamp(16px,1.25vw,20px);font-weight:500;line-height:1.65;margin-bottom:24px;text-shadow:0 1px 3px #0008}
+.hero-benefits{display:flex;align-items:center;padding:18px 14px;border:1px solid #ffffff50;border-radius:15px;background:transparent;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);width:620px;max-width:115%;gap:13px}
+.hero-benefits>div{display:flex;align-items:center;gap:8px;flex:1;min-width:0;padding-right:9px}
+.hero-benefits>div+div{border-left:1px solid #ffffff99;padding-left:12px}
+.hero-benefits img{width:43px;flex:none}
+.hero-benefits p{margin:0;line-height:1.4;font-size:13px}
+.hero-benefits strong,.hero-benefits span{display:block}
+.hero-benefits strong{font-size:clamp(15px,1.1vw,18px);line-height:1.4;margin-bottom:6px}
+.hero-benefits span{font-size:clamp(13px,1vw,16px);line-height:1.5;font-weight:500}
+.hero-student{position:absolute;left:36%;bottom:0;width:36%;height:auto;max-height:88%;object-fit:contain;object-position:bottom;z-index:1;pointer-events:none}
+
+/* Rotator / slides */
+.motion-slide{position:absolute;inset:0;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 600ms ease,visibility 0s 600ms}
+.motion-slide.is-current{opacity:1;visibility:visible;pointer-events:auto;transition:opacity 600ms ease,visibility 0s}
+.hero-rotator{height:88%;aspect-ratio:3/4;isolation:isolate;overflow:hidden;pointer-events:none}
+.hero-rotator .portrait-slide img{width:100%;height:100%;object-fit:contain;object-position:center bottom;max-height:none;transform:translateY(3%)}
+.motion-paused .motion-slide{transition:none}
+.hero-application-region{display:contents}
+.mobile-application-section[hidden]{display:none}
+
+.application-panel{width:29.5%;background:white;color:var(--ink);border-radius:20px;padding:24px 18px 50px;position:relative;z-index:3;box-shadow:0 8px 25px #00000018}
+.application-title{text-align:center;margin-bottom:50px}
+.application-title p{font-size:14px;margin-bottom:6px}
+.application-title h2{font-family:"Plus Jakarta Sans",sans-serif;font-size:20px;line-height:1.3;font-weight:800;margin:0}
+.application-panel .row{--bs-gutter-x:14px;--bs-gutter-y:14px}
+.application-panel .form-control,.application-panel .form-select{font-size:10px;border-color:#ddd;padding:12px 10px;min-height:38px;box-shadow:0 0 3px #00000008;border-radius:6px;line-height:1.4}
+.application-panel .form-select{padding-right:21px;background-size:10px}
+.application-panel .form-control:disabled{background:#fafafa;color:#999}
+.application-panel .form-control::placeholder{color:#6c6c6c;opacity:1}
+.application-panel .invalid-feedback{font-size:11px}
+.application-panel .btn-nims{font-size:12px;padding:12px}
+.consent{margin:29px 12px 23px;padding-left:22px}
+.consent .form-check-input{width:13px;height:13px;margin-left:-22px;margin-top:3px}
+.consent label{font-size:10px;line-height:1.5;color:#666;display:block;text-align:center}
+.form-check-input:checked{background-color:var(--red);border-color:var(--red)}
+.form-status{font-size:12px;line-height:1.6;margin-top:16px;padding:14px;background:#eef7ee;color:#183d25;border-radius:5px}
+.form-error-summary{font-size:12px;padding:10px}
+.form-error-summary ul{margin-bottom:0;padding-left:16px}
+#application-form{scroll-margin-top:30px}
+
+@media (max-width:1199px){
+  .hero{height:740px}
+  .hero-inner{width:92%}
+  .hero-copy{width:42%}
+  .hero-benefits{padding:13px 8px;gap:5px;width:510px}
+  .hero-benefits img{width:30px}
+  .hero-benefits p,.hero-benefits strong{font-size:15px}
+  .hero-benefits span{font-size:13px}
+  .hero-benefits>div+div{padding-left:7px}
+  .hero-student{left:32%;width:39%;max-height:76%}
+  .application-panel{width:33%;padding:25px 15px 30px}
+  .application-title{margin-bottom:30px}
+  .application-title h2{font-size:17px}
+  .hero-intro{max-width:360px;font-size:16px}
+}
+@media (max-width:991px){
+  .hero{height:auto;min-height:0;overflow:hidden;padding:50px 0 40px}
+  .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:stretch}
+  .hero-copy{width:100%;grid-column:1;grid-row:1;align-self:center;padding-bottom:0}
+  .hero-student{grid-column:2;grid-row:1;position:relative;left:auto;bottom:auto;width:100%;height:100%;max-height:none;align-self:end;object-fit:contain;object-position:bottom}
+  .hero h1{font-size:145px}
+  .hero-intro{max-width:100%}
+  .hero-benefits{width:190%;max-width:none;position:relative;z-index:3;margin-top:25px;min-height:75px}
+  .hero-benefits strong{font-size:16px}
+  .hero-benefits span{font-size:14px}
+  .hero-benefits img{width:37px}
+  .application-panel{width:100%;grid-column:1/-1;grid-row:2;padding:30px;max-width:660px;justify-self:center}
+  .application-title{margin-bottom:25px}
+  .application-title h2{font-size:21px}
+  .application-panel .form-control,.application-panel .form-select{font-size:12px;padding:14px;min-height:46px}
+  .application-title p{font-size:13px}
+  .consent{margin-block:25px}
+  .consent label{text-align:left;font-size:12px}
+  .application-panel .btn-nims{padding:15px;font-size:14px}
+  .hero-rotator{height:100%;aspect-ratio:auto}
+}
+@media(min-width:992px) and (max-width:1199px){
+  .hero-benefits>div{flex-direction:column;align-items:flex-start}
+}
+
+@media (max-width:575px){
+  .hero{padding:34px 0 25px}
+  .hero-backdrop{background-position:42% top}
+  .hero-inner{width:90%;gap:26px;grid-template-columns:1fr 1fr}
+  .hero-copy{grid-column:1/-1;min-height:480px;padding-top:0;align-self:start}
+  .school-name{font-size:22px;line-height:1.35}
+  .hero h1{font-size:132px;margin-top:8px;line-height:1.15}
+  .admissions-ribbon{font-size:9px;padding:8px 12px;gap:8px}
+  .hero-rule{margin:24px 0 15px;width:65px}
+  .hero-intro{max-width:53%;font-size:11px;line-height:1.7}
+  .hero-student{position:absolute;object-fit:contain;max-width:none;z-index:1}
+  .hero-benefits{position:relative;width:100%;margin-top:35px;padding:13px 8px;gap:8px;max-width:100%;backdrop-filter:blur(10px);border-radius:12px;min-height:70px}
+  .hero-benefits>div{gap:6px;padding-right:0}
+  .hero-benefits>div+div{padding-left:8px}
+  .hero-benefits img{width:25px}
+  .hero-benefits strong{font-size:9px;line-height:1.3;margin-bottom:4px}
+  .hero-benefits span{font-size:8px;line-height:1.4}
+  .application-panel{padding:26px 18px 30px;border-radius:16px}
+  .application-title h2{font-size:19px}
+  .application-title p{font-size:12px}
+  .application-panel .form-control,.application-panel .form-select{font-size:10px;min-height:44px;padding:12px 8px}
+  .application-panel .form-select{padding-right:20px}
+  .application-panel .row{--bs-gutter-x:10px;--bs-gutter-y:12px}
+  .consent label{font-size:10px}
+  .consent{margin:24px 2px}
+  .application-panel .btn-nims{font-size:12px;padding:13px}
+  .admissions-ribbon{min-height:44px}
+  .consent{min-height:44px}
+  .hero-student{grid-column:auto;grid-row:auto;width:75%;height:420px;top:15px;left:40%}
+  .hero-rotator{height:420px;aspect-ratio:auto}
+}
+@media (max-width:575px){
+  .hero{padding-top:28px}
+  .hero-inner{gap:24px}
+  .hero-copy{min-height:490px}
+  .school-name{max-width:62%;font-size:21px}
+  .hero h1{font-size:clamp(96px,30vw,126px);line-height:1.15}
+  .admissions-ribbon{max-width:74%;padding:10px 12px;gap:8px;font-size:clamp(9px,2.6vw,11px);letter-spacing:0}
+  .hero-rule{margin:20px 0 14px}
+  .hero-intro{max-width:49%;font-size:12px;line-height:1.6;margin:0}
+  .hero-student{top:85px;left:43%;width:65%;height:350px}
+  .hero-benefits{position:absolute;left:0;bottom:0;width:100%;max-width:100%;min-height:80px;margin:0;padding:12px 8px;gap:6px}
+  .hero-benefits>div{flex-direction:column;align-items:flex-start;gap:6px}
+  .hero-benefits>div + div{padding-left:8px}
+  .hero-benefits img{width:24px}
+  .hero-benefits strong{font-size:11px;margin-bottom:3px}
+  .hero-benefits span{font-size:10px;line-height:1.35}
+  .application-panel{padding:24px 16px}
+  .application-title{margin-bottom:24px}
+  .application-panel .form-control,.application-panel .form-select{font-size:12px;min-height:46px}
+  .application-panel .form-select{padding-right:20px}
+  .application-panel .row>.col-6:nth-last-child(-n +2){width:100%}
+  .consent label{text-align:left;font-size:11px;line-height:1.6}
+  .application-panel .btn-nims{font-size:14px;min-height:48px}
+}
+@media (max-width:360px){
+  .hero-copy{min-height:520px}
+  .school-name{font-size:19px}
+  .hero-student{height:330px;top:90px}
+  .hero-benefits strong{font-size:10px}
+  .hero-benefits span{font-size:9px}
+}
+
+/* 5a. Match Law's phone hero */
+@media(max-width:767px){
+ .hero{width:100%;height:100vh;height:100dvh;min-height:0;padding:0;overflow:hidden}
+ .hero-backdrop{inset:0;background-position:center;background-size:cover}
+ .hero:after{background:linear-gradient(180deg,#0009 0%,#0003 45%,#0006 100%)}
+ .hero-inner{display:block;width:100%;max-width:none;height:100%;padding:clamp(22px,5dvh,42px) 16px 0}
+ .hero-copy{position:static;width:100%;height:100%;min-height:0;padding:0}
+ .hero .school-name{width:max-content;max-width:100%;margin:0 0 10px;padding:2px 0 2px 10px;border-left:3px solid #fff;font-size:clamp(18px,5vw,24px);line-height:1.2;letter-spacing:.02em}
+ .hero h1{max-width:100%;margin:0 0 14px;font-size:clamp(76px,22vw,110px);line-height:1}
+ .hero .admissions-ribbon{max-width:100%;min-height:44px;padding:10px 14px;gap:10px;background:#8c0a1c;font-size:clamp(12px,3.3vw,16px);line-height:1.3}
+ .hero .hero-rule,.hero .hero-intro{display:none}
+ .hero .hero-rotator,.hero .hero-student{position:absolute;z-index:1;top:auto;left:50%;right:auto;bottom:clamp(130px,17dvh,148px);width:100%;height:clamp(250px,44dvh,410px);max-width:520px;max-height:none;aspect-ratio:auto;transform:translateX(-50%)}
+ .hero .hero-rotator .portrait-slide{display:flex;align-items:flex-end;justify-content:center;width:100%;height:100%;margin:0}
+ .hero .hero-rotator .portrait-slide img{display:block;width:100%;height:100%;max-width:100%;object-fit:contain;object-position:center bottom;transform:none}
+ .hero .hero-benefits{position:absolute;z-index:3;left:50%;right:auto;bottom:clamp(10px,2.5dvh,20px);width:calc(100% - 24px);max-width:520px;min-height:104px;margin:0;padding:12px 6px;gap:0;align-items:stretch;border:1px solid #ffffff44;border-radius:14px;background:#2b1a168f;transform:translateX(-50%)}
+ .hero .hero-benefits>div{position:relative;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;padding:0 6px;border:0;text-align:center}
+ .hero .hero-benefits>div+div:before{content:"";position:absolute;left:0;top:12%;bottom:12%;width:1px;background:#ffffff50}
+ .hero .hero-benefits img{width:28px;height:28px;object-fit:contain}
+ .hero .hero-benefits strong{margin:0 0 3px;font-size:clamp(10px,2.8vw,13px);line-height:1.35}
+ .hero .hero-benefits span{font-size:clamp(9px,2.5vw,11px);line-height:1.4}
+ .mobile-application-section{padding:24px 5%;background:#800020}
+ .mobile-application-section .application-panel{width:100%;max-width:660px;margin-inline:auto;background:#fff}
+}
+@media(max-width:767px) and (max-height:620px){
+ .hero-inner{padding-top:12px}
+ .hero .school-name{margin-bottom:7px;font-size:16px}
+ .hero h1{margin-bottom:8px;font-size:64px}
+ .hero .admissions-ribbon{min-height:36px;padding:8px 11px;font-size:11px}
+ .hero .hero-rotator,.hero .hero-student{bottom:124px;height:38dvh;min-height:168px;max-height:220px}
+ .hero .hero-benefits{bottom:8px;min-height:104px}
+}
+@media(max-width:767px) and (max-height:480px){
+ .hero{height:560px}
+ .hero .hero-rotator,.hero .hero-student{height:250px;max-height:none}
+}
+
+/* 5b. Header + hero = 60% viewport (ye final hai) */
+@media(max-width:767px){
+ .site-header{height:72px}
+ .hero{height:calc(60vh - 72px);height:calc(60svh - 72px);min-height:0;padding:0;overflow:hidden}
+ .hero:after{background:linear-gradient(180deg,#071a2dcc 0%,#071a2d66 38%,#071a2d14 70%,#150c08aa 100%)}
+ .hero-inner{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto minmax(0,1fr) auto;gap:6px;width:100%;max-width:540px;height:100%;min-height:0;padding:14px 12px 10px}
+ .hero-copy{display:contents;width:auto;height:auto;min-height:0;padding:0}
+ .hero .school-name{grid-column:1;grid-row:1;position:relative;z-index:3;width:max-content;max-width:100%;margin:0;padding:0;border:0;color:#fff;font:400 clamp(24px,6.5vw,32px)/1.04 Anton,sans-serif;letter-spacing:.01em;transform:none}
+ .hero h1{grid-column:1;grid-row:2;position:relative;z-index:3;width:max-content;max-width:100%;margin:0;font-size:clamp(30px,8vw,40px);line-height:1;letter-spacing:0}
+ .hero .admissions-kicker{display:block;grid-column:1;grid-row:3;position:relative;z-index:3;max-width:58%;margin:0;color:#fff;font-size:11px;font-weight:500;line-height:1.3}
+ .hero .admissions-ribbon{display:inline-flex;grid-column:1;grid-row:4;position:relative;z-index:3;justify-self:start;width:max-content;max-width:62%;min-height:36px;padding:8px;gap:6px;border-radius:6px;background:#c8102e;font-size:10px;line-height:1.35}
+ .hero .hero-rule,.hero .hero-intro{display:none}
+ .hero .hero-rotator,.hero .hero-student{position:absolute;top:auto;right:0;bottom:80px;left:auto;width:60%;height:68%;min-height:0;max-width:none;max-height:none;aspect-ratio:auto;transform:none}
+ .hero .hero-rotator .portrait-slide{display:flex;align-items:flex-end;justify-content:center;width:100%;height:100%;margin:0;transition:opacity .45s ease,visibility 0s .45s}
+ .hero .hero-rotator .portrait-slide.is-current{transition:opacity .45s ease,visibility 0s}
+ .hero .hero-rotator .portrait-slide img{display:block;width:auto;height:100%;max-width:100%;object-fit:contain;object-position:center bottom;filter:none!important;background:#00000001;transform:none}
+ .hero .hero-benefits{position:relative;grid-column:1;grid-row:6;z-index:4;left:auto;right:auto;bottom:auto;display:flex;align-items:stretch;width:100%;max-width:none;height:70px;min-height:0;margin:0;padding:7px 3px;gap:0;border:1px solid #ffffff44;border-radius:12px;background:#2b1a16e6;box-shadow:0 4px 16px #0000001a;backdrop-filter:blur(8px);transform:none}
+ .hero .hero-benefits>div{position:relative;display:flex;flex:1;flex-direction:column;align-items:center;justify-content:flex-start;gap:5px;padding:0 3px;border:0;text-align:center}
+ .hero .hero-benefits>div+div:before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:1px;background:#ffffff30}
+ .hero .hero-benefits img{width:18px;height:18px;object-fit:contain}
+ .hero .hero-benefits strong{margin:0;color:#fff;font-size:9px;line-height:1.2}
+ .hero .hero-benefits span{color:#fff;font-size:8px;line-height:1.2}
+
+ /* form hero ke niche */
+ .mobile-application-section{padding:16px 12px 12px;background:none}
+ .mobile-application-section .application-panel{width:100%;max-width:660px;margin:0 auto;padding:16px;border:1px solid #cbd2dc;border-radius:14px;background:none;box-shadow:0 3px 12px #202b3a08}
+ .mobile-application-section .application-title{display:block;margin:0 0 14px;text-align:center}
+ .mobile-application-section .application-title h2{margin:0;text-align:center;font-size:clamp(16px,4.3vw,20px);line-height:1.4}
+ .mobile-application-section .application-panel .row{--bs-gutter-x:10px;--bs-gutter-y:10px}
+ .mobile-application-section .application-panel .row>.col-6{width:50%}
+ .mobile-application-section .application-panel .form-control,.mobile-application-section .application-panel .form-select{height:44px;min-height:44px;padding:10px;font-size:13px;line-height:1.3}
+ .mobile-application-section .application-panel input.form-control{font-size:16px}
+ .mobile-application-section .application-panel .form-control::placeholder{font-size:13px}
+ .mobile-application-section .application-panel .form-select{padding-right:21px;background-size:10px;background-position:right 7px center}
+ .mobile-application-section .consent{min-height:34px;margin:12px 0;padding-left:22px}
+ .mobile-application-section .consent .form-check-input{width:16px;height:16px;margin-top:2px;margin-left:-22px}
+ .mobile-application-section .consent label{text-align:left;font-size:11px;line-height:1.5}
+ .mobile-application-section .application-panel .btn-nims{min-height:44px;padding:10px;font-size:14px}
+}
+@media(max-width:700px) and (max-height:740px){
+ .hero-inner{padding-top:10px;gap:4px}
+ .hero h1{font-size:25px}
+}
+
+@media(min-width:768px){
+ .hero{height:clamp(620px,44vw,720px);min-height:620px;padding:0;isolation:isolate}
+ .hero-inner{display:flex;width:90%;max-width:1600px;height:100%;margin-inline:auto;align-items:center;justify-content:space-between;gap:24px}
+ .hero-copy{position:relative;z-index:3;width:35%;min-height:0;padding:0;transform:none}
+ .hero h1{line-height:1;margin-bottom:8px}
+ .hero .hero-rule{margin:22px 0 16px}
+ .hero .hero-intro{line-height:1.5;margin-bottom:18px}
+ .hero .hero-benefits{padding-block:14px}
+ .hero .hero-rotator,.hero .hero-student{position:absolute;z-index:2;top:auto;right:auto;left:36%;bottom:-1%;width:auto;height:86%;max-width:none;max-height:none;aspect-ratio:3/4;transform:none}
+ .hero .application-panel{position:relative;z-index:5;width:28.5%;max-width:420px;margin-left:auto;padding:20px 14px 28px;border-radius:18px}
+ .hero .application-title{margin-bottom:34px}
+ .hero .application-panel .row{--bs-gutter-x:12px;--bs-gutter-y:11px}
+ .hero .application-panel .form-control,.hero .application-panel .form-select{min-height:36px;padding-block:10px}
+ .hero .consent{margin:21px 10px 18px}
+}
+@media(min-width:768px) and (max-width:1199px){
+ .hero{height:680px;min-height:680px}
+ .hero-inner{width:94%;gap:18px}
+ .hero-copy{width:41%;transform:none}
+ .hero .hero-rotator,.hero .hero-student{left:34%;height:77%}
+ .hero .application-panel{width:36%;padding:20px 14px 24px}
 }

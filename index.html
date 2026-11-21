@@ -50,171 +50,147 @@
        <main id="main-content">
 
               <!-- Hero and Application Form -->
-              <section aria-labelledby="hero-title" class="hero">
-                     <div aria-hidden="true" class="hero-backdrop"></div>
-                     <div class="hero-inner">
-                            <div class="hero-copy">
-                                   <p class="school-name">START YOUR JOURNEY WITH</p>
-
-                                   <h1 id="hero-title"><span class="hero-title-nims">NIMS</span> <span
+<section aria-labelledby="hero-title" class="hero" data-active-index="2" style="--mobile-portrait-base: 165.125px;">
+    <div class="hero-backdrop"></div>
+    <div class="hero-inner">
+     <div class="hero-copy">
+      <!-- <p class="school-name">
+       NIMS SCHOOL OF
+       
+      </p>
+      <h1 id="hero-title">Physiotherapy & Occupational Therapy</h1> -->
+       <h1 id="hero-title"><span class="hero-title-nims">NIMS</span> <span
                                                  class="hero-title-law">College of Physiotherapy <br>&
                                                  Occupational Therapy</span></h1>
-                                   <a class="admissions-ribbon" href="#application-form">ADMISSIONS OPEN (2027–28)
-                                          <span aria-hidden="true">→</span></a>
-                                   <div aria-hidden="true" class="hero-rule"></div>
-                                   <!-- <p class="hero-intro">Build Your Future in Physiotherapy & Occupational Therapy with Industry-Relevant Learning, Practical Training, Clinical Exposure and Career Success.</p> -->
-                                   <div class="hero-benefits">
-                                          <div>
-                                                 <!-- <img alt="" decoding="async" height="42" loading="eager" src="images/barconciling.webp" width="42"> -->
-                                                 <p><strong>350+<br>Global Academic Partnerships</strong></p>
-                                          </div>
-                                          <div>
-                                                 <!-- <img alt="" decoding="async" height="42" loading="eager" src="images/icon-gavel.svg" width="42"> -->
-                                                 <p>Up to<strong>100%<br>Fee Discount</strong></p>
-                                          </div>
-                                          <div>
-                                                 <!-- <img alt="" decoding="async" height="42" loading="eager" src="images/icon-scales.svg" width="42"> -->
-                                                 <p><strong>7 MPT<br>Specialisations to Choose From</strong></p>
-
-
-                                          </div>
-                                          <div>
-                                                 <!-- <img alt="" decoding="async" height="42" loading="eager" src="images/library.webp" width="42"> -->
-                                                 <p><strong>Train Across<br>Neuro, Ortho, Pediatric, Cardiac &
-                                                               More</strong></p>
-                                          </div>
-                                   </div>
-                            </div>
-                            <!-- <div class="hero-student hero-rotator">
-                                   <figure class="portrait-slide motion-slide is-current"><img alt="NIMS law student holding legal study books" decoding="async" height="1309" loading="eager" fetchpriority="high" src="images/hero-law-student-clean-v2.png" width="1201"></figure>
-                                   <figure class="portrait-slide motion-slide"><img alt="Law student studying and writing beside legal books" decoding="async" height="1254" loading="eager" src="images/hero-learning-the-law-clean-v2.png" width="1254">
-                                   </figure>
-                                   <figure class="portrait-slide motion-slide"><img alt="Law student presenting a moot court argument" decoding="async" height="1182" loading="eager" src="images/hero-moot-court-clean-v2.png" width="1331"></figure>
-                                   <figure class="portrait-slide motion-slide"><img alt="Advocate presenting a legal argument" decoding="async" height="1118" loading="eager" src="images/hero-advocate-clean-v2.png" width="1407"></figure>
-                                   <figure class="portrait-slide motion-slide"><img alt="Judge seated at a judicial bench" decoding="async" height="1024" loading="eager" src="images/hero-judge-clean-v2.png" width="1536"></figure>
-                            </div> -->
-                            <div class="hero-application-region">
-                                   <div class="application-panel" id="apply">
-                                          <div class="application-title">
-                                                 <p>Apply Today For</p>
-                                                 <h2>
-                                                        NIMS University
-                                                        <br>
-                                                        Rajasthan, Jaipur
-                                                 </h2>
-                                          </div>
-                                          <form id="application-form" novalidate="">
-                                                 <div class="form-error-summary alert alert-danger" hidden=""
-                                                        role="alert" tabindex="-1"></div>
-                                                 <div class="row g-3">
-                                                        <div class="col-6">
-                                                               <label class="visually-hidden" for="student-name">Student
-                                                                      Name</label>
-                                                               <input autocomplete="name" class="form-control"
-                                                                      id="student-name" minlength="2" name="studentName"
-                                                                      placeholder="Student Name *" required="">
-                                                               <div class="invalid-feedback">Enter your full name.</div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                               <label class="visually-hidden" for="email">Email</label>
-                                                               <input autocomplete="email" class="form-control"
-                                                                      id="email" name="email" placeholder="Email *"
-                                                                      required="" type="email">
-                                                               <div class="invalid-feedback">Enter a valid email.</div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                               <label class="visually-hidden" for="mobile">Mobile
-                                                                      Number</label>
-                                                               <input autocomplete="tel-national" class="form-control"
-                                                                      id="mobile" inputmode="numeric" maxlength="10"
-                                                                      name="mobile" pattern="[6-9][0-9]{9}"
-                                                                      placeholder="Mobile Number *" required=""
-                                                                      type="tel">
-                                                               <div class="invalid-feedback">Enter a 10-digit Indian
-                                                                      mobile number.</div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                               <label class="visually-hidden" for="otp">OTP
-                                                                      Verification</label>
-                                                               <input aria-describedby="otp-note" class="form-control"
-                                                                      disabled="" id="otp" placeholder="Enter OTP *">
-                                                               <span class="visually-hidden" id="otp-note">Phone
-                                                                      verification will be completed by
-                                                                      admissions.</span>
-                                                        </div>
-                                                        <div class="col-6">
-                                                               <label class="visually-hidden" for="state">State</label>
-                                                               <select class="form-select" id="state" name="state"
-                                                                      required="">
-                                                                      <option value="">Select State *</option>
-                                                               </select>
-                                                               <div class="invalid-feedback">Select your state.</div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                               <label class="visually-hidden" for="city">City</label>
-                                                               <select class="form-select" disabled="" id="city"
-                                                                      name="city" required="">
-                                                                      <option value="">Select City *</option>
-                                                               </select>
-                                                               <div class="invalid-feedback">Select your city.</div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                               <label class="visually-hidden"
-                                                                      for="qualification">Qualification</label>
-                                                               <select class="form-select" id="qualification"
-                                                                      name="qualification" required="">
-                                                                      <option value="">Select Qualification *</option>
-                                                                      <option>Class 12 / Higher Secondary</option>
-                                                                      <option>Graduate</option>
-                                                                      <option value="Final year of graduation">Final
-                                                                             Year Of Graduation</option>
-                                                                      <option>Postgraduate</option>
-                                                                      <option>Other</option>
-                                                               </select>
-                                                               <div class="invalid-feedback">Select your qualification.
-                                                               </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                               <label class="visually-hidden"
-                                                                      for="discipline">Discipline</label>
-                                                               <select class="form-select" id="discipline"
-                                                                      name="discipline" required="">
-                                                                      <option value="">Select Discipline *</option>
-                                                                      <option>Law</option>
-                                                               </select>
-                                                               <div class="invalid-feedback">Select a discipline.</div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                               <label class="visually-hidden"
-                                                                      for="programme">Programme</label>
-                                                               <select class="form-select" id="programme"
-                                                                      name="programme" required="">
-                                                                      <option value="">Select Program *</option>
-                                                                      <option>B.A. LL.B.</option>
-                                                                      <option>BBA LL.B.</option>
-                                                                      <option>LL.B.</option>
-                                                                      <option>LL.M.</option>
-                                                                      <option>Ph.D. in Law</option>
-                                                               </select>
-                                                               <div class="invalid-feedback">Select a programme.</div>
-                                                        </div>
-                                                 </div>
-                                                 <div class="form-check consent">
-                                                        <input class="form-check-input" id="consent" name="consent"
-                                                               required="" type="checkbox">
-                                                        <label class="form-check-label" for="consent">I agree to receive
-                                                               information regarding my submitted application by signing
-                                                               up on NIMS University *</label>
-                                                        <div class="invalid-feedback">Please confirm your consent.</div>
-                                                 </div>
-                                                 <button class="btn btn-nims w-100" type="submit">Apply Now</button>
-                                                 <div class="form-status" hidden="" id="form-status" role="status"
-                                                        tabindex="-1"></div>
-                                          </form>
-                                   </div>
-                            </div>
-                     </div>
-              </section>
+      <p class="admissions-kicker">Build Your Future in Physiotherapy</p>
+      <a class="admissions-ribbon" href="#application-form">
+       Admissions Open (2027–28)
+       <span aria-hidden="true">→</span>
+      </a>
+      <div class="hero-rule"></div>
+      <p class="hero-intro">Build Your Future in Physiotherapy & Occupational Therapy with a Curriculum Designed for Clinical Excellence, Hands-On Experience, Patient-Centred Care, and Career Success.</p>
+      <div class="hero-benefits">
+       <div>
+        <img alt="Dual degree graduation cap" decoding="async" height="67" loading="eager" src="images/globe-icon.png" width="67">
+        <p>
+         <strong>350+</strong>
+         <span>Global Academic Partnerships</span>
+        </p>
+       </div>
+       <div>
+        <img alt="Scholarship and fee discount" decoding="async" height="67" loading="eager" src="images/student-icon.avif" width="67">
+        <p>
+         <strong>Get Up To 100%</strong>
+         <span>Fee Discount</span>
+        </p>
+       </div>
+       <div>
+        <img alt="Expert faculty and industry guidance" decoding="async" height="67" loading="eager" src="images/quality-icon.avif" width="67">
+        <p>
+         <strong>7 MPT</strong>
+         <span>Specialisations to Choose From</span>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div aria-label="Dream, learn, achieve and experience at NIMS" class="hero-student hero-rotator" id="hero-portraits" role="group">
+      <div aria-hidden="true" class="portrait-slide motion-slide" inert="">
+       <img alt="MBA student — Dream" decoding="async" height="1400" fetchpriority="high" loading="eager" src="images/slider-img01.webp" width="1050">
+      </div>
+      <div aria-hidden="true" class="portrait-slide motion-slide" inert="">
+       <img alt="MBA student — Learn" decoding="async" height="1400" loading="lazy" src="images/slider-img02.webp" width="1049">
+      </div>
+      <div aria-hidden="false" class="portrait-slide motion-slide is-current">
+       <img alt="MBA student — Achieve" decoding="async" height="1400" loading="lazy" src="images/slider-img03.webp" width="1049">
+      </div>
+      <!-- <div aria-hidden="true" class="portrait-slide motion-slide" inert="">
+       <img alt="MBA student — Experience" decoding="async" height="1400" loading="lazy" src="images/hero-slide-img.png" width="1049">
+      </div> -->
+     </div>
+     <div class="hero-application-region">
+     
+     <div class="application-panel" id="apply">
+      <div class="application-title">
+       <p>Apply Today For Admission 2027-28</p>
+       
+      </div>
+      <form id="application-form" novalidate="">
+       <div class="form-error-summary alert alert-danger" hidden="" role="alert" tabindex="-1"></div>
+       <div class="row g-3">
+        <div class="col-6">
+         <label class="visually-hidden" for="student-name">Student Name</label>
+         <input autocomplete="name" class="form-control" id="student-name" minlength="2" name="studentName" placeholder="Student Name *" required="">
+         <div class="invalid-feedback">Enter your full name.</div>
+        </div>
+        <div class="col-6">
+         <label class="visually-hidden" for="email">Email</label>
+         <input autocomplete="email" class="form-control" id="email" name="email" placeholder="Email *" required="" type="email">
+         <div class="invalid-feedback">Enter a valid email.</div>
+        </div>
+        <div class="col-6">
+         <label class="visually-hidden" for="mobile">Mobile Number</label>
+         <input autocomplete="tel-national" class="form-control" id="mobile" inputmode="numeric" maxlength="10" name="mobile" pattern="[6-9][0-9]{9}" placeholder="Mobile Number *" required="" type="tel">
+         <div class="invalid-feedback">Enter a 10-digit Indian mobile number.</div>
+        </div>
+        <div class="col-6">
+         <label class="visually-hidden" for="otp">OTP Verification</label>
+         <input aria-describedby="otp-note" class="form-control" disabled="" id="otp" placeholder="Enter OTP *">
+         <span class="visually-hidden" id="otp-note">Phone verification will be completed by admissions.</span>
+        </div>
+        <div class="col-6">
+         <label class="visually-hidden" for="state">State</label>
+         <select class="form-select" id="state" name="state" required="">
+          <option value="">Select State *</option>
+         <option value="Andaman and Nicobar Islands">Andaman And Nicobar Islands</option><option value="Andhra Pradesh">Andhra Pradesh</option><option value="Arunachal Pradesh">Arunachal Pradesh</option><option value="Assam">Assam</option><option value="Bihar">Bihar</option><option value="Chandigarh">Chandigarh</option><option value="Chhattisgarh">Chhattisgarh</option><option value="Dadra and Nagar Haveli and Daman and Diu">Dadra And Nagar Haveli And Daman And Diu</option><option value="Delhi">Delhi</option><option value="Goa">Goa</option><option value="Gujarat">Gujarat</option><option value="Haryana">Haryana</option><option value="Himachal Pradesh">Himachal Pradesh</option><option value="Jammu and Kashmir">Jammu And Kashmir</option><option value="Jharkhand">Jharkhand</option><option value="Karnataka">Karnataka</option><option value="Kerala">Kerala</option><option value="Ladakh">Ladakh</option><option value="Lakshadweep">Lakshadweep</option><option value="Madhya Pradesh">Madhya Pradesh</option><option value="Maharashtra">Maharashtra</option><option value="Manipur">Manipur</option><option value="Meghalaya">Meghalaya</option><option value="Mizoram">Mizoram</option><option value="Nagaland">Nagaland</option><option value="Odisha">Odisha</option><option value="Puducherry">Puducherry</option><option value="Punjab">Punjab</option><option value="Rajasthan">Rajasthan</option><option value="Sikkim">Sikkim</option><option value="Tamil Nadu">Tamil Nadu</option><option value="Telangana">Telangana</option><option value="Tripura">Tripura</option><option value="Uttar Pradesh">Uttar Pradesh</option><option value="Uttarakhand">Uttarakhand</option><option value="West Bengal">West Bengal</option></select>
+         <div class="invalid-feedback">Select your state.</div>
+        </div>
+        <div class="col-6">
+         <label class="visually-hidden" for="city">City</label>
+         <select class="form-select" disabled="" id="city" name="city" required="">
+          <option value="">Select City *</option>
+         </select>
+         <div class="invalid-feedback">Select your city.</div>
+        </div>
+        <div class="col-12">
+         <label class="visually-hidden" for="qualification">Qualification</label>
+         <select class="form-select" id="qualification" name="qualification" required="">
+          <option value="">Select Qualification *</option>
+          <option>Graduate</option>
+          <option value="Final year of graduation">Final Year Of Graduation</option>
+          <option>Postgraduate</option>
+          <option>Other</option>
+         </select>
+         <div class="invalid-feedback">Select your qualification.</div>
+        </div>
+        <div class="col-6">
+         <label class="visually-hidden" for="discipline">Discipline</label>
+         <select class="form-select" id="discipline" name="discipline" required="">
+          <option value="">Select Discipline *</option>
+          <option>Management</option>
+         </select>
+         <div class="invalid-feedback">Select a discipline.</div>
+        </div>
+        <div class="col-6">
+         <label class="visually-hidden" for="programme">Programme</label>
+         <select class="form-select" id="programme" name="programme" required="">
+          <option value="">Select Program *</option>
+          <option>MBA</option>
+          <option value="MBA in Agribusiness Management">MBA in Agribusiness Management</option>
+         </select>
+         <div class="invalid-feedback">Select a programme.</div>
+        </div>
+       </div>
+       <div class="form-check consent">
+        <input class="form-check-input" id="consent" name="consent" required="" type="checkbox">
+        <label class="form-check-label" for="consent">I agree to receive information regarding my submitted application by signing up on NIMS University *</label>
+        <div class="invalid-feedback">Please confirm your consent.</div>
+       </div>
+       <button class="btn btn-nims w-100" type="submit">Apply Now</button>
+       <div class="form-status" hidden="" id="form-status" role="status" tabindex="-1"></div>
+      </form>
+     </div></div>
+    </div>
+   </section>
 
               <!-- End Hero and Application Form -->
 
