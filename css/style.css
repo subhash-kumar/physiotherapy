@@ -2180,6 +2180,7 @@ html{scroll-padding-bottom:calc(var(--sticky-cta-height) + 16px)}
 .sticky-admissions-inner h2{margin:0;color:#fff;font:400 clamp(26px,2.5vw,40px)/1.2 Anton,sans-serif}
 .sticky-admissions-apply{display:inline-flex;align-items:center;justify-content:center;gap:16px;flex:none;min-height:48px;min-width:170px;padding:10px 24px;border-radius:999px;background:#fff;color:#b80013;font:700 17px/1.4 var(--bs-body-font-family)}
 .sticky-admissions-apply:hover{background:#fff1d9;color:#8c0005}
+.sticky-admissions-apply-icon {display: none;}
 .sticky-admissions-call{display:flex;align-items:center;gap:12px;color:#fff;flex:none}
 .sticky-admissions-call svg{display:block;width:48px;height:48px;fill:currentColor;flex:none}
 .sticky-admissions-call small{display:block;font-size:12px;line-height:1.4}
