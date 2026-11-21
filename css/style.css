@@ -2458,7 +2458,7 @@ min-height:0;margin:0;padding:1.5cqw;border:1px solid #eadfe1;border-radius:3cqw
 #rankings .university-award-row--cegr-law .university-award-list{grid-template-columns:repeat(3,minmax(0,1fr))}
 #rankings .law-outlook-card{display:flex;flex-direction:column;justify-content:center;min-width:0;min-height:170px;padding:22px 24px;border:1px solid #d8d8d8;border-radius:22px;background:#fff;color:#282828}
 #rankings .law-outlook-brand{display:flex;justify-content:center;align-items:center;margin-bottom:18px}
-#rankings .law-outlook-brand img{display:block;width:clamp(110px,11vw,180px);height:auto}
+#rankings .law-outlook-brand img{display:block;width: 500px;height:auto}
 #rankings .law-outlook-award{display:grid;grid-template-columns:clamp(56px,4.4vw,80px) minmax(0,1fr);align-items:center;gap:10px}
 #rankings .law-outlook-award .award-title-trophy{display:block;width:100%;height:clamp(76px,6vw,108px);object-fit:contain}
 #rankings .law-outlook-award h3{margin:0 0 5px;color:#c92534;font:700 clamp(13px,.95vw,18px)/1.4 var(--bs-body-font-family)}
