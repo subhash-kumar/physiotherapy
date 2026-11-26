@@ -3750,7 +3750,7 @@ button[aria-label*="next" i]:disabled{
 .hero-inner{height:100%;position:relative;max-width:1600px;margin:auto;width:92.5%;display:flex;align-items:center;justify-content:space-between}
 .hero-copy{width:41%;padding-bottom:8px;position:relative;z-index:2}
 .school-name{font-size:clamp(28px,2.5vw,40px);line-height:1.25;border-left:2px solid #ee0014;padding-left:7px;font-weight:700;margin-bottom:12px}
-.hero h1{font:600 clamp(48px,12.5vw,50px)/1.15 Anton,sans-serif;margin:0 0 10px;background:linear-gradient(105deg,#ffcf30,#ff182b);color:transparent;background-clip:text;-webkit-background-clip:text;width:max-content;line-height: 1.2 !important;}
+.hero h1{font:600 clamp(65px,71.5vw,59px)/1.15 Anton,sans-serif;margin:0 0 10px;background:linear-gradient(105deg,#ffcf30,#ff182b);color:transparent;background-clip:text;-webkit-background-clip:text;line-height: 1.2 !important;}
 .admissions-kicker{display:none;max-width:470px;margin:0 0 12px;color:#fff;font-size:clamp(12px,1vw,15px);font-weight:700;line-height:1.45;letter-spacing:.02em;text-shadow:0 1px 3px #0008}
 .admissions-ribbon{background:#d6000b;color:white;min-height:44px;padding:10px 20px;font-weight:800;font-size:clamp(14px,1.2vw,18px);line-height:1.4;letter-spacing:0;display:inline-flex;gap:18px;align-items:center}
 .admissions-ribbon:hover{background:#bd0006}
